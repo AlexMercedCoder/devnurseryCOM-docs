@@ -5,15 +5,11 @@ import starlight from "@astrojs/starlight";
 export default defineConfig({
   integrations: [
     starlight({
-      title: "Seir-Kale",
+      title: "DevNursery.com - New Web Developer Docs",
       social: {
-        github: "https://github.com/AlexMercedCoder/starlight-class-template/",
+        github: "https://github.com/AlexMercedCoder/",
       },
       sidebar: [
-        {
-          label: "Curriculum",
-          autogenerate: { directory: "curriculum" },
-        },
         {
           label: "Reference",
           autogenerate: { directory: "reference" },

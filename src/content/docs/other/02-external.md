@@ -1,8 +1,10 @@
 ---
 title: Useful Tutorials/Resources
-description: A guide in my new Starlight docs site.
+description: A Guide to finding other resources for your journey
 ---
 
-Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
-Writing a good guide requires thinking about what your users are trying to do.
+## Blogs
+- [GrokOverflow](https://www.grokoverflow.com)
+
+## Code Challenges
 

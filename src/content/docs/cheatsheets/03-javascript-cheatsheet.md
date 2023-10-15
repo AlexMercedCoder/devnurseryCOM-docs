@@ -2,7 +2,7 @@
 title: Javascript Cheatsheet
 description: A Quick Reference for Javascript
 ---
-
+# String Methods
 | String Method         | Purpose                                       | Example                                       |
 |-----------------------|-----------------------------------------------|-----------------------------------------------|
 | `length`              | Returns the length of a string                | `const str = 'Hello';`<br>`const len = str.length;` |
@@ -33,7 +33,7 @@ description: A Quick Reference for Javascript
 | `padStart(length, padString)` | Pads the beginning of a string with a specified character(s) until it reaches a certain length | `const str = '42';`<br>`const paddedStr = str.padStart(5, '0');` |
 | `padEnd(length, padString)` | Pads the end of a string with a specified character(s) until it reaches a certain length | `const str = '42';`<br>`const paddedStr = str.padEnd(5, '0');` |
 
-# Array Method
+# Array Methods
 
 | Array Method            | Purpose                                      | Example                                       |
 |-------------------------|----------------------------------------------|-----------------------------------------------|
@@ -66,3 +66,77 @@ description: A Quick Reference for Javascript
 | `flatMap(callback)`     | Maps each element using a mapping function and flattens the result into a new array | `const numbers = [1, 2, 3, 4, 5];`<br>`const doubledAndSquared = numbers.flatMap(num => [num * 2, num ** 2]);` |
 | `from(iterable, mapFn, thisArg)` | Creates a new array from an iterable object | `const iterable = '12345';`<br>`const newArray = Array.from(iterable, Number);` |
 | `of(...elements)`       | Creates a new array with the specified elements | `const numbers = Array.of(1, 2, 3, 4, 5);` |
+
+# JavaScript `Array` Constructor
+
+| Action                                      | Example Usage                                   |
+|---------------------------------------------|-------------------------------------------------|
+| Create an empty array                       | `let emptyArray = new Array();`                 |
+| Create an array with initial values         | `let numbers = new Array(1, 2, 3);`            |
+| Get the length of an array                  | `let length = myArray.length;`                 |
+| Access an element by index                  | `let element = myArray[index];`                |
+| Add elements to the end of an array         | `myArray.push(element1, element2);`            |
+| Remove and return the last element          | `let lastElement = myArray.pop();`             |
+| Add elements to the beginning of an array   | `myArray.unshift(element1, element2);`         |
+| Remove and return the first element         | `let firstElement = myArray.shift();`          |
+| Find the index of an element                | `let index = myArray.indexOf(element);`        |
+| Check if an element exists in an array      | `let exists = myArray.includes(element);`      |
+| Remove an element by index                  | `myArray.splice(index, 1);`                   |
+| Copy an array                               | `let copyArray = new Array(...myArray);`       |
+| Concatenate arrays                          | `let combinedArray = array1.concat(array2);`  |
+| Convert an array to a string                | `let str = myArray.join(', ');`                |
+
+# JavaScript `Object` Constructor
+
+| Action                                      | Example Usage                                |
+|---------------------------------------------|----------------------------------------------|
+| Create an empty object                      | `let emptyObject = new Object();`            |
+| Create an object with properties             | `let person = new Object({ name: 'John', age: 30 });` |
+| Access a property by name                   | `let value = myObject.propertyName;`        |
+| Set a property by name                      | `myObject.propertyName = value;`             |
+| Check if an object has a property           | `let hasProperty = myObject.hasOwnProperty('propertyName');` |
+| Delete a property                           | `delete myObject.propertyName;`              |
+| Iterate over object properties              | `for (let key in myObject) { ... }`          |
+| Copy an object                              | `let copyObject = Object.assign({}, myObject);` |
+| Merge objects                               | `let mergedObject = Object.assign({}, obj1, obj2);` |
+| Convert an object to JSON string            | `let jsonString = JSON.stringify(myObject);` |
+| Parse a JSON string to an object            | `let parsedObject = JSON.parse(jsonString);` |
+
+# JavaScript `JSON` Object
+
+| Action                                      | Example Usage                                   |
+|---------------------------------------------|-------------------------------------------------|
+| Parse a JSON string to an object             | `let obj = JSON.parse(jsonString);`             |
+| Convert an object to a JSON string           | `let jsonString = JSON.stringify(obj);`         |
+| Clone an object                             | `let clone = JSON.parse(JSON.stringify(obj));`  |
+
+# JavaScript `Math` Object
+
+| Action                                      | Example Usage                                   |
+|---------------------------------------------|-------------------------------------------------|
+| Generate a random number between 0 and 1    | `let random = Math.random();`                   |
+| Generate a random integer between min and max | `let randomInt = Math.floor(Math.random() * (max - min + 1)) + min;` |
+| Round a number to the nearest integer        | `let rounded = Math.round(number);`             |
+| Calculate the square root of a number        | `let sqrt = Math.sqrt(number);`                 |
+| Calculate the absolute value of a number     | `let absValue = Math.abs(number);`              |
+| Find the minimum of two or more numbers      | `let minNumber = Math.min(num1, num2, ...);`    |
+| Find the maximum of two or more numbers      | `let maxNumber = Math.max(num1, num2, ...);`    |
+| Calculate the sine, cosine, or tangent        | `let sine = Math.sin(angle);`                   |
+| Calculate the natural logarithm              | `let ln = Math.log(number);`                   |
+| Calculate the power of a number              | `let power = Math.pow(base, exponent);`         |
+| Round a number down to the nearest integer   | `let roundedDown = Math.floor(number);`         |
+| Round a number up to the nearest integer     | `let roundedUp = Math.ceil(number);`            |
+
+# JavaScript `Function` Object Methods
+
+| Action                                      | Example Usage                                   |
+|---------------------------------------------|-------------------------------------------------|
+| Define a function                           | `function myFunction(param1, param2) { ... }`   |
+| Call a function                             | `myFunction(arg1, arg2);`                       |
+| Pass a function as an argument               | `function doSomething(callback) { ... }`        |
+| Return a value from a function              | `return result;`                                |
+| Use the `arguments` object                  | `let arg1 = arguments[0];`                      |
+| Define anonymous functions                  | `let add = function(x, y) { return x + y; };`   |
+| Use arrow functions                         | `let add = (x, y) => x + y;`                    |
+| Use function expressions in objects         | `{ sayHello: function() { ... } }`              |
+| Define and call immediately invoked function| `(function() { ... })();`                        |

@@ -256,3 +256,23 @@ DNS Hierarchy: The DNS system is organized into a hierarchical structure, with e
 - **DNS Security:** DNS is vulnerable to various attacks, including DNS spoofing and cache poisoning. To enhance security, DNSSEC (DNS Security Extensions) was introduced, which digitally signs DNS records to ensure data integrity and authenticity.
 
 In summary, the Domain Name System is a critical infrastructure that allows users to access resources on the Internet using human-readable domain names. It functions by translating domain names into IP addresses through a hierarchical and distributed network of DNS servers, reducing the complexity of navigating the vast expanse of the Internet.
+
+# Mac Addresses
+
+A Media Access Control (MAC) address, often referred to simply as a MAC address or hardware address, is a unique identifier assigned to network interfaces, such as network adapters (Ethernet or Wi-Fi) on network-connected devices like computers, smartphones, routers, and more. These addresses are primarily used at the data link layer of the OSI networking model.
+
+## Here are key characteristics of MAC addresses:
+
+**Uniqueness:** Each MAC address is intended to be globally unique. No two network devices should have the same MAC address, ensuring that network equipment can uniquely identify and communicate with each device on a network.
+
+**48-Bit Address:** Most MAC addresses are 48 bits in length, often represented as a series of six pairs of hexadecimal digits (e.g., 00:1A:2B:3C:4D:5E). The first three pairs typically identify the manufacturer or vendor of the network interface, and the last three pairs are assigned by the manufacturer to uniquely identify the device.
+
+**Network Communication:** MAC addresses are used for local network communication. When devices on the same network need to communicate with each other, they use MAC addresses to address packets at the data link layer. This is in contrast to IP addresses, which are used for routing data across different networks (e.g., the Internet).
+
+**Not Routable:** Unlike IP addresses, MAC addresses are not routable on the global Internet. Routers at the network layer do not use MAC addresses to forward packets beyond the local network segment.
+
+**Static and Dynamic:** Some MAC addresses are hard-coded into network hardware (e.g., Ethernet cards) and remain static throughout the device's lifetime. Others, particularly in Wi-Fi networks, can be dynamically generated and changed periodically for privacy reasons.
+
+**Address Resolution Protocol (ARP):** On Ethernet networks, the Address Resolution Protocol (ARP) is used to map IP addresses to MAC addresses. When a device wants to communicate with another device on the same local network, it uses ARP to discover the MAC address associated with the target's IP address.
+
+MAC addresses play a crucial role in local network communication, enabling devices to identify and communicate with each other on the same network segment. They are essential for delivering data frames to the appropriate destination within a local network, ensuring proper network functioning.

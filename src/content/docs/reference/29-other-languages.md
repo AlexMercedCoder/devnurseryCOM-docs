@@ -506,3 +506,120 @@ end
 
 Example.main()
 ```
+
+# Perl and Raku
+
+## Perl:
+### What is Perl?
+
+Perl is a high-level, general-purpose programming language known for its text processing capabilities, regular expression support, and strong community.
+
+It was created by Larry Wall in the late 1980s and has since evolved into Perl 5, which is widely used for a range of applications, from web development to system administration.
+
+### Printing to the Console in Perl:
+
+In Perl, you can use the print function to output text to the console.
+Here's how you print to the console in Perl:
+```perl
+print "Hello, Perl!\n"; # The "\n" represents a newline character for line breaks
+```
+### Declaring Variables in Perl:
+
+Perl doesn't require explicit variable declarations. You can create variables by simply assigning values to them.
+
+Variable names start with a sigil (a special character), such as $ for scalars (single values) and @ for arrays (ordered lists).
+
+Here's an example of variable declaration in Perl:
+```perl
+my $name = "John"; # Scalar variable
+my @numbers = (1, 2, 3, 4); # Array variable
+```
+## Raku (formerly known as Perl 6):
+### What is Raku?
+
+Raku is a modern programming language inspired by Perl and designed to be expressive, readable, and versatile.
+
+It aims to combine the best features of Perl 5 with new and innovative language design concepts.
+
+Raku offers powerful text manipulation capabilities, object-oriented programming, and a wide range of built-in data types.
+
+### Printing to the Console in Raku:
+
+In Raku, you can use the say function to print text to the console. say automatically appends a newline character, simplifying output.
+
+```raku
+say "Hello, Raku!";
+```
+
+### Declaring Variables in Raku:
+
+Similar to Perl, Raku allows you to create variables without explicit declarations.
+Raku introduces a more flexible sigil system. For scalars, you can use $, but it also supports sigils like @ for arrays and % for hashes (associative arrays).
+
+```raku
+my $name = "Jane"; # Scalar variable
+my @numbers = 1, 2, 3, 4; # Array variable
+my %data = "key" => "value"; # Hash variable
+```
+
+Raku has continued to evolve with a strong focus on modern software development practices, while Perl 5 remains a valuable choice for many legacy systems and projects. 
+
+Both languages provide powerful text processing capabilities and flexible variable handling, making them versatile options for various programming tasks.
+
+## Working with Strings:
+### Perl:
+
+Perl provides powerful string manipulation capabilities. You can concatenate strings using the . operator or use double-quoted strings for interpolation.
+```perl
+my $name = "John";
+my $greeting = "Hello, " . $name; # Concatenation
+my $message = "The value of \$name is: $name"; # Interpolation
+```
+### Raku:
+
+Raku's string handling is more intuitive, with interpolation available by default in double-quoted strings. Raku also supports string interpolation using {}.
+```raku
+my $name = "Jane";
+my $greeting = "Hello, $name"; # String interpolation
+my $message = "The value of \$name is: {$name}"; # Interpolation with {}
+```
+## Working with Arrays:
+### Perl:
+
+Perl uses arrays and array functions for working with ordered lists of data. You can add elements using push, remove elements using pop, and access elements by index.
+```perl
+my @numbers = (1, 2, 3, 4);
+push @numbers, 5; # Add an element
+my $first = $numbers[0]; # Access element by index
+```
+### Raku:
+
+Raku offers a more consistent and feature-rich array handling experience. You can use various array methods like push, pop, and shift.
+```raku
+my @numbers = 1, 2, 3, 4;
+@numbers.push(5); # Add an element
+my $first = @numbers[0]; # Access element by index
+```
+## Writing Functions:
+### Perl:
+
+In Perl, you define subroutines (functions) using the sub keyword. Arguments are accessed via the @_ array, and the return keyword is used to return values.
+```perl
+sub add_numbers {
+    my ($x, $y) = @_;
+    return $x + $y;
+}
+my $result = add_numbers(3, 4);
+```
+### Raku:
+
+Raku simplifies function definition and parameter handling. You use sub to define a subroutine, and parameters are declared within parentheses.
+```raku
+sub add-numbers($x, $y) {
+    return $x + $y;
+}
+my $result = add-numbers(3, 4);
+```
+Raku offers more consistent and readable syntax for function definitions and parameter handling. Both languages, however, allow you to define functions for modularizing code and performing reusable tasks effectively.
+
+These examples demonstrate some of the similarities and differences between Perl and Raku in terms of string manipulation, working with arrays, and writing functions. Both languages have their strengths and unique features, making them valuable choices for various programming tasks.

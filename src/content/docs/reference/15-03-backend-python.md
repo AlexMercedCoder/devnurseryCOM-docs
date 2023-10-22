@@ -1,64 +1,7 @@
 ---
-title: Python/Django
-description: A reference page in my new Starlight docs site.
+title: Python Backend Development
+description: A reference page on python backend development
 ---
-
-## Basics of Python:
-### 1. What Is Python?
-Python is a high-level, interpreted programming language known for its simplicity and readability. It was created by Guido van Rossum and first released in 1991. Python is widely used in various domains, including web development, data science, scientific computing, artificial intelligence, and more. It emphasizes code readability and a clean, concise syntax, making it an excellent choice for beginners and experienced developers alike.
-
-### 2. Defining Variables:
-In Python, you can define variables to store and manipulate data. Variable names are case-sensitive and should follow certain naming conventions:
-
-- Variable names can consist of letters (a-z, A-Z), digits (0-9), and underscores (_).
-- Variable names must start with a letter or an underscore.
-- Python is dynamically typed, meaning you don't need to declare a variable's data type explicitly. Python infers the data type based on the value assigned to it.
-
-#### Examples of defining variables:
-
-```py
-# Integer variable
-age = 25
-
-# String variable
-name = "Alice"
-
-# Boolean variable
-is_student = True
-
-# Floating-point variable
-price = 9.99
-```
-### 3. Data Types and Operators:
-Python supports various data types and operators for performing operations on data. Here's an overview:
-
-- a. **Numeric Data Types:**
-  - **int:** Represents integer values, e.g., 10, -5.
-  - **float:** Represents floating-point (decimal) values, e.g., 3.14, -0.5.
-  - **complex:** Represents complex numbers, e.g., 1 + 2j.
-- b. **String Data Type:**
-  - **str:** Represents text or string values, enclosed in single (') or double (") quotes, e.g., 'Hello, World!'.
-- c. **Boolean Data Type:**
-  - **bool:** Represents Boolean values, either True or False.
-- d. **Containers:**
-  - **List:** An ordered collection of elements, denoted by square brackets [], e.g., [1, 2, 3].
-  - **Tuple:** An ordered, immutable collection of elements, denoted by parentheses (), e.g., (1, 2, 3).
-  - **Dictionary:** A collection of key-value pairs, denoted by curly braces {}, e.g., {"name": "Alice", "age": 25}.
-  - **Set:** An unordered collection of unique elements, denoted by curly braces {}, e.g., {1, 2, 3}.
-- e. **Operators:**
-  - **Arithmetic Operators:** + (addition), - (subtraction), * (multiplication), / (division), % (modulo), ** (exponentiation).
-
-  - **Comparison Operators:** == (equal), != (not equal), < (less than), > (greater than), <= (less than or equal), >= (greater than or equal).
-
-  - **Logical Operators:** and (logical AND), or (logical OR), not (logical NOT).
-
-  - **Assignment Operators:** = (assignment), += (add and assign), -= (subtract and assign), *= (multiply and assign), /= (divide and assign), %= (modulo and assign), **= (exponentiate and assign).
-
-  - **Membership Operators:** in (checks if an element is present in a sequence), not in (checks if an element is not present).
-
-  - **Identity Operators:** is (checks if two variables refer to the same object), is not (checks if two variables do not refer to the same object).
-
-These basics provide a foundation for writing Python code. As you explore Python further, you'll delve into more advanced concepts and libraries to build a wide range of applications.
 
 ## What is Django and Getting Started
 ### What is Django?
@@ -471,3 +414,93 @@ By using Gunicorn or Uvicorn in conjunction with your Python web application, yo
 9. `--access-log`: Configures access logging. Example: `--access-log myapp_access.log`.
 
 10. `--error-log`: Configures error logging. Example: `--error-log myapp_error.log`.
+
+# Using Flask for Web Development
+Flask is a lightweight and flexible web framework for Python. It's widely used for developing web applications and APIs. In this section, we'll explore the basics of setting up a Flask project, defining routes, using templates, sending JSON responses, and enabling CORS.
+
+## Setting Up a Flask Project:
+**Installation**: Start by installing Flask using pip:
+
+```
+pip install Flask
+```
+
+**Project Structure**: Organize your project structure with a directory for templates (HTML files) and another for static files (e.g., CSS, JavaScript). Here's a basic project structure:
+
+```shell
+myflaskapp/
+├── app.py
+├── templates/
+│   ├── index.html
+├── static/
+│   ├── style.css
+```
+
+**Creating a Flask App**: In your app.py file, import Flask and create a Flask app:
+
+```py
+from flask import Flask
+
+app = Flask(__name__)
+```
+## Writing Routes:
+Routes define the URLs that your application responds to. You can define routes using the @app.route decorator. Here's an example route that renders an HTML template:
+
+```py
+@app.route('/')
+def index():
+    return render_template('index.html')
+```
+## Using Templates:
+Flask supports rendering templates using the Jinja2 templating engine. You can pass variables to templates and use them to generate dynamic content. For example, in your index.html template:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to My Flask App</h1>
+    <p>{{ message }}</p>
+</body>
+</html>
+```
+
+In your route function:
+
+```py
+@app.route('/')
+def index():
+    message = "Hello, Flask!"
+    return render_template('index.html', message=message)
+```
+## Sending JSON Responses:
+To send JSON responses, you can use Flask's jsonify function. Here's an example route that returns a JSON response:
+
+```py
+from flask import jsonify
+
+@app.route('/api/data')
+def api_data():
+    data = {"message": "This is JSON data"}
+    return jsonify(data)
+```
+## Enabling CORS:
+If you need to enable Cross-Origin Resource Sharing (CORS) for your API, you can use the Flask-CORS extension. First, install it:
+
+```bash
+pip install flask-cors
+```
+Then, initialize and configure it in your Flask app:
+
+```py
+from flask_cors import CORS
+
+
+CORS(app)
+```
+This allows your API to respond to requests from different domains.
+
+Flask provides a simple and flexible way to build web applications and APIs. By following these steps, you can set up a Flask project, define routes, use templates, send JSON responses, and enable CORS as needed for your application.

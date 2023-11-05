@@ -242,3 +242,79 @@ for (const [key, value] of Object.entries(person)) {
 This approach provides a concise and readable way to iterate over object properties and access both keys and values.
 
 Understanding these techniques for iterating over objects will help you work effectively with object data structures and access the properties you need for various operations in your JavaScript code.
+
+# Iterators and Generators
+
+JavaScript provides advanced iteration capabilities through iterators and generators. These features allow you to create custom iterable objects with specific behaviors, making it easier to handle complex data structures and asynchronous operations.
+
+## Custom Iterators
+
+Custom iterators enable you to define the iteration logic for your objects. To create a custom iterator, you need to implement the `[Symbol.iterator]()` method on an object, which returns an iterator object. The iterator object must have a `next()` method that returns an object with `value` and `done` properties.
+
+Here's an example of a custom iterable object:
+
+```javascript
+const customIterable = {
+  data: [1, 2, 3, 4, 5],
+  [Symbol.iterator]() {
+    let index = 0;
+    return {
+      next: () => {
+        if (index < this.data.length) {
+          return { value: this.data[index++], done: false };
+        }
+        return { value: undefined, done: true };
+      },
+    };
+  },
+};
+
+for (const num of customIterable) {
+  console.log(num); // Output: 1, 2, 3, 4, 5
+}
+```
+In this example, customIterable is an object with a custom iterator that allows you to iterate over its data array.
+
+# Generators
+Generators are a more advanced feature that simplifies the creation of iterators. They are defined using a function with an asterisk (function*) and can yield values using the yield keyword. A generator function returns an iterator when called, allowing you to control the iteration flow.
+
+Here's an example of a simple generator function:
+
+```js
+function* numberGenerator() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+const generator = numberGenerator();
+
+console.log(generator.next()); // Output: { value: 1, done: false }
+console.log(generator.next()); // Output: { value: 2, done: false }
+console.log(generator.next()); // Output: { value: 3, done: false }
+console.log(generator.next()); // Output: { value: undefined, done: true }
+```
+Generators offer more concise syntax for defining custom iterators and allow you to pause and resume the iteration process.
+
+## Async Iteration with Generators
+Generators are especially useful for handling asynchronous operations. By yielding promises and using async/await, you can create asynchronous iterators that work seamlessly with asynchronous data sources.
+
+Here's an example of an asynchronous generator:
+
+```js
+async function* asyncNumberGenerator() {
+  yield await Promise.resolve(1);
+  yield await Promise.resolve(2);
+  yield await Promise.resolve(3);
+}
+
+const asyncGenerator = asyncNumberGenerator();
+
+for await (const num of asyncGenerator) {
+  console.log(num); // Output: 1, 2, 3
+}
+```
+
+This asynchronous generator yields promises, which are resolved asynchronously, allowing you to work with async data sources in a structured manner.
+
+Understanding iterators and generators empowers you to create custom iteration logic for your data structures and handle complex iteration scenarios, including asynchronous operations.

@@ -17,14 +17,6 @@ In this guide to advanced JavaScript iteration, we'll explore the following topi
 
 4. **Iterators and Generators**: Diving into advanced iteration concepts, including custom iterators and generators, which enable you to create iterable objects with custom behavior.
 
-5. **Async Iteration**: Exploring asynchronous iteration using `for...of` and asynchronous generators, which are essential for handling asynchronous data sources and asynchronous code.
-
-6. **Parallel Iteration**: Learning techniques for parallel iteration and processing using features like `Promise.all`, `Promise.allSettled`, and `for...await...of`.
-
-7. **Iterating with Functional Programming**: Leveraging functional programming principles to simplify iteration and make your code more declarative and composable.
-
-8. **Performance Optimization**: Understanding performance considerations when working with large datasets and ways to optimize iteration for efficiency.
-
 By the end of this guide, you'll have a comprehensive understanding of advanced JavaScript iteration techniques and be equipped to write more efficient and expressive code when working with arrays, objects, and asynchronous data. Whether you're a JavaScript beginner looking to deepen your understanding or an experienced developer seeking to master advanced iteration patterns, this guide will provide valuable insights and practical examples to enhance your skills. Let's embark on this journey to become proficient in advanced JavaScript iteration!
 
 # The Iteration Protocol

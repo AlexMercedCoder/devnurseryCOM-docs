@@ -23,6 +23,24 @@ export default defineConfig({
           autogenerate: { directory: "other" },
         },
       ],
+      head: [
+        {
+          tag: 'script',
+          attrs: {
+            async: true,
+            src: 'https://www.googletagmanager.com/gtag/js?id=G-K9J4L6ESZ3', // Replace with your Google Analytics ID
+          },
+        },
+        {
+          tag: 'script',
+          content: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-K9J4L6ESZ3'); // Replace with your Google Analytics ID
+          `,
+        },
+      ],
     }),
   ],
 });

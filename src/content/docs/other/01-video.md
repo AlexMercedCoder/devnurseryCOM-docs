@@ -4,7 +4,7 @@ description: A guide in my new Starlight docs site.
 ---
 
 #  Git
-- [Article Explaining What is Git](https://tuts.alexmercedcoder.com/2021/1/guidetogit/)
+- [Article Explaining What is Git](https://tuts.alexmercedcoder.dev/2021/1/guidetogit/)
 - [Video Intro to Git](https://www.youtube.com/watch?v=L4zbgo7KFoA&list=PLY6oTPmKnKbYjGEm9nLowExbgkI-epIgg&index=7&t=9s)
 - [Video working with git Remotes](https://www.youtube.com/watch?v=TOsVVxXdtu8&list=PLY6oTPmKnKbYjGEm9nLowExbgkI-epIgg&index=9&t=2s)
 - [Setting up SSH on Git](https://www.youtube.com/watch?v=6u84sACs0v0&list=PLY6oTPmKnKbYjGEm9nLowExbgkI-epIgg&index=8)
@@ -41,9 +41,7 @@ description: A guide in my new Starlight docs site.
 
 # Other Topics
 - [Computer Science Concepts](https://www.youtube.com/watch?v=5vZzy1h-Dmk&list=PLY6oTPmKnKbbfwjU1ToZlUWCinxmFqlIp&pp=iAQB)
-- [Javascript 101](https://www.youtube.com/watch?v=5vZzy1h-Dmk&list=PLY6oTPmKnKbbfwjU1ToZlUWCinxmFqlIp&pp=iAQB)
-- [Programming in GO](https://www.youtube.com/watch?v=5vZzy1h-Dmk&list=PLY6oTPmKnKbbfwjU1ToZlUWCinxmFqlIp&pp=iAQB)
-- [Programming in Clojue](https://www.youtube.com/watch?v=QUaZOprIaLs&list=PLY6oTPmKnKbarM5X9VpYCVtPH85rsunv0&pp=iAQB)
+- [Programming in Clojure](https://www.youtube.com/watch?v=QUaZOprIaLs&list=PLY6oTPmKnKbarM5X9VpYCVtPH85rsunv0&pp=iAQB)
 - [Programming in C#](https://www.youtube.com/watch?v=Qz-4d_HH0lY&list=PLY6oTPmKnKbaQfi5KyW7IexlIsIKD1Oqb&pp=iAQB)
 - [Programming in Dart](https://www.youtube.com/watch?v=BTn36FhprnM&list=PLY6oTPmKnKbZaOObALdHSgGTZhne6Q-yJ&pp=iAQB)
 - [Programming in Ruby](https://www.youtube.com/watch?v=N0dBICQc0aE&list=PLY6oTPmKnKbZp8Kh6jS5A6j-6H2kGY12e&pp=iAQB)
@@ -55,6 +53,5 @@ description: A guide in my new Starlight docs site.
 - [Working with Angular](https://www.youtube.com/watch?v=Q8sEbQSgvD4&list=PLY6oTPmKnKbahNK_YUsjTzP5U-FkGA544&pp=iAQB)
 - [Working with React](https://www.youtube.com/watch?v=qDGWCbkGj9E&list=PLY6oTPmKnKbba6LlpF7kcnsyWdlwePt_V&pp=iAQB)
 - [Working with Vue](https://www.youtube.com/watch?v=3UcZGDfAFnU&list=PLY6oTPmKnKbbsEAIDfFAlhAVbSCIt2Bxx&pp=iAQB)
-- [Styling with CSS]()
-- [Working MongoDB](https://i.ytimg.com/vi/_nvIGmI_zS0/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDCHZrc0sbgx4-7WiwJpZO-342z-w)
+- [Working with MongoDB](https://www.youtube.com/watch?v=_nvIGmI_zS0)
 - [Learning SQL](https://www.youtube.com/watch?v=86cTvTTpelg&list=PLY6oTPmKnKbYC24jbJwOmekvsraIV8Gv7&pp=iAQB)

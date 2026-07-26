@@ -1,5 +1,5 @@
 ---
-title: Other Language
+title: Other Languages
 description: Reference on Other Programming Languages
 ---
 

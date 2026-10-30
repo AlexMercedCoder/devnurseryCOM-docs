@@ -45,7 +45,10 @@ export default defineConfig({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-K9J4L6ESZ3'); // Replace with your Google Analytics ID
+            gtag('config', 'G-K9J4L6ESZ3');
+            if (/^(www\\.)?(docs\\.)?devnursery\\.com$/.test(location.hostname)) {
+              gtag('config', 'G-4F1DTQJNDM');
+            } // Replace with your Google Analytics ID
           `,
         },
       ],
